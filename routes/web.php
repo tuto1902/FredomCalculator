@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/items/create', 'ItemsController@create');
+Route::post('/items', 'ItemsController@store');
+
+Route::any('/', 'HomeController@index');
